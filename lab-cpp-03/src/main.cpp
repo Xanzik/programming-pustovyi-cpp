@@ -7,7 +7,7 @@
  * для демонстрації роботи, ваша програма (функція main()) повинна мати можливість викликати
  * розроблену функцію з різними вхідними даними.
  *
- * @file main.c
+ * @file main.cpp
  * @brief Файл з основним кодом.
  *
  * @author Pustovyi I.
@@ -15,6 +15,14 @@
  * @version 1.0
  */
 #include "list.h"
+/**
+ * @brief main function
+ * - Створюєємо обєкти годинників та список за допомогою конструктора
+ * - додаємо часи до списку {@link >>} та {@link addWatch} метод класу {@link List}
+ * - записуємо масив до файлу {@link <<} метод класу {@link List}
+ * - виводимо на екран {@link print} метод класу {@link List}
+ * @return successful return code from the program (0)
+ */
 int main() {
 	Watch *Air = new Watch("AirWatch", "Yes", 500, "AirCompany", "UK", "Sport");
     Watch *Fair = new Watch("FairWatch", "No", 300, "FairCompany", "USA", "Style");
@@ -54,6 +62,7 @@ int main() {
     for(unsigned int i = 0; i < list->getSize(); i++) {
             fout << (*list)[(int)i];
     }
+    list->print();
     fout.close();
     return 0;
 }

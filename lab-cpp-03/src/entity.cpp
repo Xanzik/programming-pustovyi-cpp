@@ -1,3 +1,11 @@
+/**
+ * @file entity.cpp
+ * @brief Файл з реалізацією функцій пов'язаних зі структурою "Список"
+ *
+ * @author Пустовий І. І.
+ * @date 18-may-2022
+ * @version 1.0
+ */
 #include "entity.h"
 
 Watch::Watch() {

@@ -1,18 +1,63 @@
+/**
+ * @file list.hpp
+ * @brief Файл з класом типу "Список" та його методами
+ *
+ * @author Пустовий І. І.
+ * @date 18-may-2022
+ * @version 1.0
+ */
 #include <iostream>
 #include <cstring>
-
-
+/**
+ * @brief Робимо список універсальним для різних типів даних
+ * 
+ * @tparam T 
+ */
 template <class T>
+
+/**
+ * @brief клас список
+ * 
+ */
 class List {
 private:
     size_t size;
     T *arr;
 public:
+    /**
+     * @brief print elements
+     * 
+     */
     void print();
+    /**
+     * @brief add element by index
+     * 
+     * @param element 
+     */
     void add(const T& element);
+    /**
+     * @brief delet element by index
+     * 
+     * @param index 
+     */
     void delet(const unsigned int index);
+    /**
+     * @brief find element
+     * 
+     * @param index index
+     * @return T& 
+     */
     T& findbyindex(const unsigned int index);
+    /**
+     * @brief sorting
+     * 
+     */
     void sort();
+    /**
+     * @brief find minimal element
+     * 
+     * @return T 
+     */
     T min();
 };
 template <class T>

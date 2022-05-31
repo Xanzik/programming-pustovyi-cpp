@@ -1,20 +1,32 @@
 /**
  * @mainpage
  * # Загальне завдання
- * Переробити програми, що були розроблені під час виконання лабораторних робіт з тем
- * “Масиви” та “Цикли” таким чином, щоб використовувалися функції для обчислення результату.
- * Функції повинні задовольняти основну їх причетність - уникати дублювання коду. Тому,
- * для демонстрації роботи, ваша програма (функція main()) повинна мати можливість викликати
- * розроблену функцію з різними вхідними даними.
+ * Для предметної галузі з розділу “Розрахункове завдання / Iндивідуальні завдання” **розробити два класи**
  *
- * @file main.c
- * @brief Файл з основним кодом.
  *
- * @author Pustovyi I.
- * @date 10-may-2022
+ * @author Pustoviy I. I.
+ * @date 18-may-2022
+ * @version 1.0
+ */
+
+/**
+ * @file main.cpp
+ * @brief Файл для ініціалізації та виклику фукцій
+ *
+ * @author Pustoviy I. I.
+ * @date 18-may-2022
  * @version 1.0
  */
 #include "list.h"
+/**
+ * @brief main function
+ * - Створюєємо обєкти годинників та список за допомогою конструктора
+ * - додаємо часи до списку {@link addWatch} метод класу {@link List}
+ * - удаляємо обєкт {@link deletewatch} метод класу {@link List}
+ * - шукаємо обєкт {@link find} метод класу {@link  List}
+ * - виводимо загальний список обєктів {@link print} метод класу {@link List}
+ * @return successful return code from the program (0)
+ */
 int main() {
 	Watch *Air = new Watch("AirWatch", "Yes", 500, "AirCompany", "UK", "Sport");
     Watch *Fair = new Watch("FairWatch", "No", 300, "FairCompany", "USA", "Style");
@@ -27,8 +39,8 @@ int main() {
     list->addWatch(Microsoft, 2);
     list->addWatch(Casio, 3);
     list->addWatch(Rolex, 4);
-    list->print();
     list->deletwatch(3);
+    list->find(600);
     list->print();
 
     return 0;

@@ -1,3 +1,11 @@
+/**
+ * @file list.cpp
+ * @brief Файл з реалізацією функцій пов'язаних зі структурою базового класу
+ *
+ * @author Пустовий І. І.
+ * @date 18-may-2022
+ * @version 1.0
+ */
 #include "list.h"
 void List::print() {
         for(unsigned int i=0; i < size;i++){

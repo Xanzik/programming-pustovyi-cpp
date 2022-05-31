@@ -1,7 +1,15 @@
+/**
+ * @file entity.cpp
+ * @brief Файл з реалізацією функцій пов'язаних зі структурою "Список"
+ *
+ * @author Пустовий І. І.
+ * @date 18-may-2022
+ * @version 1.0
+ */
 #include "entity.h"
 
 Watch::Watch() {
-    cin>>this->name>>this->water>>this->price>>this->created_by.firma>>this->created_by.country>>this->type ;
+    cin>>this->name>>this->water>>this->price>>this->created_by.firma>>this->created_by.country>>this->type;
 }
 Watch::Watch(const string name,const string water,const int price,const string firma,const string country,const string type){
     this->name = name;
