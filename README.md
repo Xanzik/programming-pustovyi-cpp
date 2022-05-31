@@ -1,4 +1,4 @@
-# programing-pustovyi
+# programing-pustovyi-cpp
 Дисципліна: Програмування
 
 ПІБ Виконавця: Пустовий Iлля Iванович
