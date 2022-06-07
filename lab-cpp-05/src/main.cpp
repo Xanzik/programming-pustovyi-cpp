@@ -30,7 +30,7 @@
  * @return successful return code from the program (0)
  */
 int main() {
-    List<int> list;
+    List<double> list;
     list.add(14);
     list.add(1);
     list.add(2);

@@ -20,7 +20,6 @@ void List::addWatch(Watch *std, size_t pos) {
     memcpy(watches, this->watchlist, pos*sizeof(Watch));
     memcpy(watches+pos, std, sizeof(Watch));
     memcpy(watches+pos+1, this->watchlist+pos, (this->size-pos)*sizeof(Watch));
-    //delete[] watchlist;
     this->watchlist = watches;
     this->size++;
     //printf("%s %s %d %s %s %s\n", std->name, std->water, std->price, std->created_by.firma, std->created_by.country, std->type);
@@ -29,7 +28,6 @@ void List::deletwatch(const unsigned int index) {
     Watch *watches = new Watch[size-1];
     memcpy(watches, watchlist, sizeof(Watch)*index);
     memcpy(watches+index,(watchlist+index+1), sizeof(Watch)*(size-index-1));
-    //delete[] watchlist;
     watchlist = watches;
     this->size--;
 }

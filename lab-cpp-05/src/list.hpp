@@ -40,14 +40,14 @@ public:
      * 
      * @param index 
      */
-    void delet(const unsigned int index);
+    void delet(const unsigned T index);
     /**
      * @brief find element
      * 
      * @param index index
      * @return T& 
      */
-    T& findbyindex(const unsigned int index);
+    T& findbyindex(const unsigned T index);
     /**
      * @brief sorting
      * 
@@ -79,7 +79,7 @@ void List<T>::sort() {
     }
 }
 template <class T>
-T& List<T>::findbyindex(const unsigned int index) {
+T& List<T>::findbyindex(const unsigned T index) {
     if(index>=size || index<0){
         std::cout<<"Segmentation Failed";
         return arr[NULL];
@@ -89,7 +89,7 @@ T& List<T>::findbyindex(const unsigned int index) {
     }
 }
 template <class T>
-void List<T>::delet(const unsigned int index) {
+void List<T>::delet(const unsigned T index) {
     T *el = new T[size-1];
     memcpy(el, arr, sizeof(T)*index);
     memcpy(el + index, (arr+index+1), sizeof(T)*(size-index-1));

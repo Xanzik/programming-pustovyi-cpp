@@ -40,14 +40,14 @@ int main() {
     Watch *Casio = new Watch("Casio", "No", 1500, "Casios", "Poland", "Classic");
     Watch *Rolex = new Watch("Rolex", "No", 3000, "RolexWatch", "Canada", "Classic");*/
     List *list = new List();
-    Watch *Por = new Watch;
+    Watch *FD = new Watch;
    /* list->addWatch(Air, 0);
     list->addWatch(Fair, 1);
     list->addWatch(Microsoft, 2);
     list->addWatch(Casio, 3);
     list->addWatch(Rolex, 4);*/
     list->readFromFile();
-    list->addWatch(Por, 5);
+    list->addWatch(FD, 5);
     cout << std::endl;
     list->writeToFile();
     list->print();
